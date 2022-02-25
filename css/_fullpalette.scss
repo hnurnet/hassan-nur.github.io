@@ -89,7 +89,6 @@ body {
     top: 262px;
     background-color: #fcfcfcfb;
     border-radius: 40px 40px 0 0;
-    
 }
 
 .full_palette_title {
@@ -98,7 +97,6 @@ body {
     h2 {
         font-family: $font-roboto;
         font-size: 2em;
-        
     }
 }
 
@@ -202,7 +200,8 @@ body {
   }
   .front:hover,
   .front:focus {
-    transform: translateX(-2000px);
+    -webkit-transform: translateX(-2000px);
+    
     cursor: pointer;
   }
 
