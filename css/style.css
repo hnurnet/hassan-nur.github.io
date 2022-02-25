@@ -221,6 +221,7 @@ body {
 .front:hover,
 .front:focus {
   -webkit-transform: translateX(-2000px);
+          transform: translateX(-2000px);
   cursor: pointer;
 }
 
