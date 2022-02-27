@@ -208,21 +208,37 @@ body {
 
 .cycle {
   font-size: 2em;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.front:hover {
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+  -webkit-animation: right-to-left 1s ease-in;
+          animation: right-to-left 1s ease-in;
+  cursor: pointer;
 }
 
 .front {
-  -webkit-transition: -webkit-transform 750ms;
-  transition: -webkit-transform 750ms;
-  transition: transform 750ms;
-  transition: transform 750ms, -webkit-transform 750ms;
-  will-change: transform;
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
 }
 
-.front:hover,
-.front:focus {
-  -webkit-transform: translateX(-2000px);
-          transform: translateX(-2000px);
-  cursor: pointer;
+@-webkit-keyframes right-to-left {
+  100% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+}
+
+@keyframes right-to-left {
+  100% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
 }
 
 .card {
