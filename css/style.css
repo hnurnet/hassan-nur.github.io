@@ -4,11 +4,13 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 body {
   background-color: #FFFFFF;
-  font-family: font-family "Roboto", sans-serif;
+  font-family: font-family "Roboto Serif", sans-serif;
   line-height: 1.6;
 }
 
@@ -89,8 +91,9 @@ body {
 }
 
 .full_palette_title h2 {
-  font-family: font-family "Roboto", sans-serif;
-  font-size: 2em;
+  font-family: 'Roboto Serif', sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
 }
 
 .fa-regular-heart {
@@ -105,6 +108,9 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: #f3f0f0;
+  /* hide icon by default */
+  /* show icon on container hover */
+  /* animate transition */
 }
 
 .list_container .entrees {
@@ -120,171 +126,131 @@ body {
   background-color: #07bb9d;
 }
 
-.wrapper {
-  position: relative;
-  max-width: 100%;
-  height: 118px;
-  margin: 0px auto;
-  clear: both;
-  background-color: #f3f0f0;
-}
-
-.front {
-  position: absolute;
-  width: 100%;
-  height: 90px;
-  padding: 15px;
-  margin: 0px auto;
-  background-color: #ffffff;
-  border-radius: 14px;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.front .item-price {
+.list_container .menu-item-container {
+  margin: .8rem .0rem;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.back {
-  position: absolute;
-  width: 100%;
-  height: 90px;
-  margin: 0px auto;
-  padding: 0 0px 0 15px;
-  background-color: #ffffff;
   border-radius: 15px;
-  z-index: 1;
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+  -webkit-animation: 1s fadeIn ease-out;
+          animation: 1s fadeIn ease-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
-.back .item-price {
+.list_container .menu-item-container:hover {
+  cursor: pointer;
+}
+
+.list_container .menu-item-container .content,
+.list_container .menu-item-container .icon-container {
+  padding: .8rem;
+}
+
+.list_container .menu-item-container .content {
+  background-color: white;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.list_container .menu-item-container .content .title {
+  font-weight: bold;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.list_container .menu-item-container .content .body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
 }
 
-.back .check-cycle {
-  width: 90px;
-  height: 90px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.list_container .menu-item-container .content .body .description {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.list_container .menu-item-container .content .body .price {
+  font-weight: bold;
+  margin-right: .35rem;
+}
+
+.list_container .menu-item-container .icon-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
-}
-
-.back .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
 }
 
-.cycle {
-  font-size: 2em;
-  -webkit-transition: 0.5s linear;
-  transition: 0.5s linear;
-}
-
-.front:hover {
-  -webkit-transform: translateX(-120%);
-          transform: translateX(-120%);
-  -webkit-animation: right-to-left 1s ease-in;
-          animation: right-to-left 1s ease-in;
-  cursor: pointer;
-}
-
-.front {
-  -webkit-transition: -webkit-transform 1s ease-in;
-  transition: -webkit-transform 1s ease-in;
-  transition: transform 1s ease-in;
-  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
-}
-
-@-webkit-keyframes right-to-left {
-  100% {
-    -webkit-transform: translateX(-120%);
-            transform: translateX(-120%);
-  }
-}
-
-@keyframes right-to-left {
-  100% {
-    -webkit-transform: translateX(-120%);
-            transform: translateX(-120%);
-  }
-}
-
-.card {
-  width: 100%;
-  height: 80px;
-  margin: 20px auto;
-  padding: 5px 15px 5px 15px;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-}
-
-.item h2 {
-  font-size: 1.3em;
-  font-family: sans-serif;
-  font-weight: 600;
-}
-
-.item-p p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #413c3c;
-}
-
-.price p {
-  font-weight: bold;
-}
-
-.item-price {
+.list_container .menu-item-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.order-btn {
+.list_container .menu-item-container .icon-container {
+  overflow: hidden;
+  padding: .7rem 0;
+  width: 0;
+}
+
+.list_container .menu-item-container:hover .icon-container {
+  padding: 0 1.8rem;
+  width: .51rem;
+}
+
+.list_container .menu-item-container .icon-container {
+  -webkit-transition: all 0.55s;
+}
+
+.list_container .menu-item-container:hover .slow-spin {
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.list_container .order-btn {
   width: 100%;
   margin: 40px auto;
   background-color: #f3f0f0;
   text-align: center;
 }
 
-.order-btn .btn {
+.list_container .order-btn .btn {
   width: 180px;
   outline: none;
   border: 0;
@@ -297,23 +263,13 @@ body {
   background: #bd03bd;
   color: #FFFFFF;
   cursor: pointer;
-  font-family: font-family "Roboto", sans-serif;
+  font-family: font-family "Roboto Serif", sans-serif;
 }
 
 @media only screen and (max-width: 430px) {
   .full_palette_title h2 {
-    font-family: font-family "Shrikhand", cursive;
     font-size: 1.2em;
-  }
-  .item h2 {
-    font-size: 0.9em;
-    font-family: sans-serif;
-    font-weight: 600;
-  }
-  .item-p p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #413c3c;
-    font-size: 11px;
+    font-weight: 700;
   }
 }
 
@@ -363,7 +319,7 @@ body {
 
 body {
   background-color: #FFFFFF;
-  font-family: font-family "Roboto", sans-serif;
+  font-family: 'Roboto Serif', sans-serif;
   line-height: 1.6;
 }
 
@@ -447,7 +403,7 @@ input {
 }
 
 .book-the-menu h1 {
-  font-family: font-family "Roboto", sans-serif;
+  font-family: 'Roboto Serif', sans-serif;
   font-size: 1.5em;
   padding-top: 30px;
   text-align: center;
@@ -457,7 +413,7 @@ input {
   text-align: center;
   padding-top: 35px;
   padding-bottom: 15px;
-  font-family: font-family "Roboto", sans-serif;
+  font-family: 'Roboto Serif', sans-serif;
   font-size: 1.4em;
   color: gray;
   line-height: normal;
@@ -486,6 +442,7 @@ input {
 }
 
 .nav h2 {
+  font-size: 1.5em;
   padding-left: 10px;
   margin-left: 5px;
 }
@@ -504,7 +461,7 @@ input {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   font-size: 1.1em;
-  font-family: font-family "Roboto", sans-serif;
+  font-family: 'Roboto Serif', sans-serif;
   color: #0f0101;
 }
 
@@ -563,6 +520,10 @@ input {
 .h2-title {
   width: 365px;
   margin: 0 auto;
+}
+
+.h2-title h2 {
+  font-size: 1.5em;
 }
 
 .new {
@@ -671,6 +632,10 @@ a {
 
 .title-h3 {
   padding-left: 15px;
+}
+
+.title-h3 h3 {
+  font-size: 1.2em;
 }
 
 .heart-icon {

@@ -22,7 +22,7 @@ $font-roboto: font-family 'Roboto', sans-serif;
 
 body {
     background-color: $white;
-    font-family: $font-roboto;
+    font-family: 'Roboto Serif', sans-serif;
     line-height: 1.6;
 }
 
@@ -93,7 +93,7 @@ input  {
       background-color: $primary-color;
       
       h1 {
-          font-family: $font-roboto;
+        font-family: 'Roboto Serif', sans-serif;
           font-size: 1.5em;
           padding-top: 30px;
           text-align: center;
@@ -102,7 +102,7 @@ input  {
           text-align: center;
           padding-top: 35px;
           padding-bottom: 15px;
-          font-family: $font-roboto;
+          font-family: 'Roboto Serif', sans-serif;
           font-size: 1.4em;
           color: gray;
           line-height:normal;
@@ -130,6 +130,7 @@ input  {
       width: 95%;
       margin: 10px auto;
     h2 {
+        font-size: 1.5em;
         padding-left: 10px;
         margin-left: 5px;
     }
@@ -146,7 +147,7 @@ input  {
         border-radius: 35px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
         font-size: 1.1em;
-        font-family: $font-roboto;
+        font-family: 'Roboto Serif', sans-serif;
         color: #0f0101;
     }
 
@@ -208,7 +209,11 @@ input  {
 
 .h2-title {
     width: 365px;
-	margin: 0 auto; 
+	margin: 0 auto;
+    
+    h2 {
+        font-size: 1.5em;
+    }
 }
 
 .new {
@@ -306,6 +311,10 @@ a {
 
 .title-h3 {
     padding-left: 15px;
+
+    h3 {
+        font-size: 1.2em;
+    }
 }
 
 .heart-icon {
@@ -354,7 +363,6 @@ a {
 .fa-hands-helping {
     margin-right: 10px;
 }
-
 @media only screen and (max-width: 385px) {
 
     .new {
