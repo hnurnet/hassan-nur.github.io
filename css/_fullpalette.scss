@@ -99,7 +99,8 @@ body {
     h2 {
         font-family: 'Roboto Serif', sans-serif;
         font-size: 1.7em;
-        font-weight: 700;
+        font-weight: 900;
+        font-style: italic;
         
     
     }
@@ -258,12 +259,15 @@ body {
     }
 
     @media only screen and (max-width: 430px) {
+        
 
         .full_palette_title {
 
             h2 {
+                font-family: 'Roboto Serif', sans-serif;
                 font-size: 1.2em;
-                font-weight: 700;
+                font-weight: 900;
+                font-style: italic;
 
             }
         }
