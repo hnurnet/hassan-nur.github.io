@@ -4,6 +4,8 @@
 @import "../css/enchanted-plate";
 @import "../css/bastille";
 @import "../css/gourmand";
+
+/*Sass variables */
 $primary-color: #fdf4f6b9;
 $primary: #9356DC;
 $secondary: #d109d1;
@@ -14,7 +16,7 @@ $font-shrikhand-titles: font-family 'Shrikhand', cursive;
 $font-roboto: font-family 'Roboto Serif', sans-serif;
 
 
-/* Reset all Margins & Padding  */
+/* Reset all the margins and padding  */
 
 * {
     box-sizing: border-box;
@@ -37,11 +39,7 @@ body {
     margin: 0px auto;
 }
 
-/* Header */
-
 /* Logo */
-
-
 .logo {
     height: 40px;
     background-size: cover;
@@ -50,8 +48,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 10px; 
-    
-    
 }
 
 .logo-image {
@@ -326,9 +322,6 @@ a {
     background-image: url('../svg/heart.svg');
     background-size: cover;
     margin-right: 15px;
-
-   
- 
 }
 
 .heart-icon:hover {
@@ -351,11 +344,8 @@ a {
 
         li {
             font-size: 1.2em;
-        }
-        
+        }  
     }
-
-   
 }
 
 .fas-fa-utensils {

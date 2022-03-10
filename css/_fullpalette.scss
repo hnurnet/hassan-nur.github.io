@@ -7,7 +7,7 @@ $lightgray: #eaeaeaf5;
 $font-shrikhand-titles: font-family 'Shrikhand', cursive;
 $font-roboto: font-family 'Roboto Serif', sans-serif;
 
-/* Reset all Margins & Padding  */
+/* Reset all the margins and padding  */
 
 * {
     box-sizing: border-box;
@@ -130,6 +130,8 @@ body {
             background-color: #07bb9d;
         }
     }
+
+    /* CSS animations  */
 
     .menu-item-container {
         margin: .8rem .0rem;
